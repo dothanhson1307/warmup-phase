@@ -32,9 +32,9 @@ function App() {
     if(poke){
       return (
       <ul className='moveslist'>
-        <li onClick={()=>{handleAttack(0,poke)}}>{Object.keys(poke.moves)[0]} </li>
-        <li onClick={()=>{handleAttack(1,poke)}}>{Object.keys(poke.moves)[1]} </li>
-        <li onClick={()=>{handleAttack(2,poke)}}>{Object.keys(poke.moves)[2]} </li>
+        <li className='pink' onClick={()=>{handleAttack(0,poke)}}>{Object.keys(poke.moves)[0]} </li>
+        <li className='pink' onClick={()=>{handleAttack(1,poke)}}>{Object.keys(poke.moves)[1]} </li>
+        <li className='pink' onClick={()=>{handleAttack(2,poke)}}>{Object.keys(poke.moves)[2]} </li>
       </ul>
     )
     }
@@ -136,7 +136,7 @@ function App() {
           </div>
 
           <div id='me'>
-            <img id='kra' src={Object.values(poke)[4]} />
+            <img id='kra' className='white' src={Object.values(poke)[4]} />
             <img src='https://i.pinimg.com/736x/1f/bb/b8/1fbbb8f71bad15d50b920b5b34abf755.jpg' className='pain pain1 none' ></img>
             <img src='https://i.pinimg.com/736x/1f/bb/b8/1fbbb8f71bad15d50b920b5b34abf755.jpg' className='pain pain2 none'></img>
             <img src='https://i.pinimg.com/736x/1f/bb/b8/1fbbb8f71bad15d50b920b5b34abf755.jpg' className='pain pain3 none'></img>
@@ -145,18 +145,18 @@ function App() {
         </div>
         <div id={`${state1} turn`}>
           <div className='prop'>
-            <div className='ness tac'> {`${poke.name}`} </div>
-            <div className='ness tac'> random boss </div>
+            <div className='ness tac pink'> {`${poke.name}`} </div>
+            <div className='ness tac pink'> random boss </div>
           </div>
           <div className='prop'>
-            <div className='ness tac' style={{color:`${processColor(poke.type)}`}}> {`${poke.type}`} </div>
-            <div className='ness tac'> bunshido </div>
+            <div className='ness tac pink' style={{color:`${processColor(poke.type)}`}}> {`${poke.type}`} </div>
+            <div className='ness tac pink'> bunshido </div>
           </div>
           <div className='prop'>
-            <div className='hpbarcontainer ness'> 
+            <div className='hpbarcontainer ness pink'> 
               <div className='tac' style={{width:`${hp}%`}}>{`${hp}`}</div>
             </div>
-            <div className='ab ness '>
+            <div className='ab ness pink'>
               <div className='tac' style={{width:`${bossHp}%`}}>{`${bossHp}`}</div>
             </div>
           </div>
